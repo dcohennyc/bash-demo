@@ -1,8 +1,9 @@
 import React from 'react';
+import VideoFeed from '../VideoFeed/VideoFeed';
 
 class VideoContainer extends React.Component {
     render() {
-        return <h1>Video Container</h1>;
+        return <VideoFeed />;     
     }
 }
 

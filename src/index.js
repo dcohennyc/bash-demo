@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import VideoFeed from './components/VideoFeed/VideoFeed';
-import VideoContainer from './components/VideoContainer/VideoContainer';
-import Sidebar from './components/Sidebar/Sidebar';
-import Room from './components/Room/Room';
+import App from './App';
 
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <VideoContainer />
-    <VideoFeed />
-    <Sidebar />
-    <Room />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

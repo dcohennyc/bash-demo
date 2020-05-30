@@ -1,0 +1,20 @@
+{
+    "users": [
+      {
+        "name": "Larry Ipsum",
+        "rooms": "room_1"
+      },
+      {
+        "name": "Katie Ipsum",
+        "rooms": "room_2"
+      },
+      {
+        "name": "Michael Dolor",
+        "rooms": "room_1, room_2"
+      },
+      {
+        "name": "Alison Sit",
+        "rooms": "room_1, room_2"
+      }
+    ]
+  }
