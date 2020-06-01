@@ -38,7 +38,8 @@
           "name": "Giannis Antetokounmpo"
         }
       ],
-      "id": "0"
+      "id": "0",
+      "active": true
     },
     {
       "name": "Room B",
@@ -68,12 +69,13 @@
           "name": "Dennis Rodman"
         }
       ],
-      "id": "1"
+      "id": "1",
+      "active": false
     },
     {
       "name": "Room C",
       "subscribed": [],
-      "id": "2"
+      "active": false
     }
   ]
 }

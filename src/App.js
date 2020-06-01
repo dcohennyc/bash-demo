@@ -36,18 +36,16 @@ class App extends Component {
         this.setState({ rooms });
       });
   }
-  
 
   render() {
     return (
       <div className="App">
         <div className="container">
-          <header className="App-header"></header>
             <div className="video-container">
               {this.state.users.map(videoData => (
-                <div key={videoData.userid} className="video-card">
+                <div key={videoData.id} className="video-card">
                   <VideoContainer
-                    key={videoData.userid}
+                    key={videoData.id}
                     name={videoData.name}
                     src={videoData.feedSrc} />
                 </div>
@@ -57,10 +55,11 @@ class App extends Component {
         <nav className="sidebar">
           <h2>Rooms</h2>
           {this.state.rooms.map(roomsData => (
-            <div className="room" key={roomsData.roomid}>
+            <div className="room" key={roomsData.id}>
               <Room
-                name={roomsData.name}
                 handler={this.handler}
+                name={roomsData.name}
+                active={roomsData.active}
                 subscribed={roomsData.subscribed} />
             </div>
           ))}

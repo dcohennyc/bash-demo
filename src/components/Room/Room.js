@@ -20,11 +20,14 @@ class Room extends React.Component {
     }
 
     render() {
-        return <div className="room"><h1>{this.props.name} </h1>
+      const isActive = this.props.active;
+        return <div className="room"><h1>{this.props.name} {isActive ? <span>(leave)</span> : <span>(join)</span>}</h1>
         {this.props.subscribed.map(subscribed => (
               <h2>{subscribed.name}</h2>
           ))}
+          {isActive ? 
           <span className="add-user" onClick={ this.addUser }>(add user)</span>
+          : <span></span>}
         </div>
         ;
     }
