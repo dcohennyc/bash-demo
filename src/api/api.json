@@ -3,53 +3,77 @@
     {
       "name": "Lebron James",
       "feedSrc": "images/lebron.jpg",
-      "userid": "0"
+      "id": "0"
     },
     {
       "name": "John Wall",
       "feedSrc": "images/johnwall.jpeg",
-      "userid": "1"
+      "id": "1"
     },
     {
       "name": "Anthony Davis",
       "feedSrc": "images/anthonydavis.jpg",
-      "userid": "2"
+      "id": "2"
     },
     {
       "name": "Giannis Antetokounmpo",
       "feedSrc": "images/giannis.jpg",
-      "userid": "3"
+      "id": "3"
     }
   ],
   "rooms": [
     {
       "name": "Room A",
       "subscribed": [
-        {"name": "Lebron James"},
-        {"name": "John Wall"},
-        {"name": "Anthony Davis"},
-        {"name": "Giannis Antetokounmpo"}
+        {
+          "name": "Lebron James"
+        },
+        {
+          "name": "John Wall"
+        },
+        {
+          "name": "Anthony Davis"
+        },
+        {
+          "name": "Giannis Antetokounmpo"
+        }
       ],
-      "roomid": "0"
+      "id": "0"
     },
     {
       "name": "Room B",
       "subscribed": [
-        {"name": "Larry Bird"},
-        {"name": "Isiah Thomas"},
-        {"name": "Magic Johnson"},
-        {"name": "Scott Burrell"},
-        {"name": "Hakeem Olajuwon"},
-        {"name": "Brad Daugherty"},
-        {"name": "Patrick Ewing"},
-        {"name": "Dennis Rodman"}
+        {
+          "name": "Larry Bird"
+        },
+        {
+          "name": "Isiah Thomas"
+        },
+        {
+          "name": "Magic Johnson"
+        },
+        {
+          "name": "Scott Burrell"
+        },
+        {
+          "name": "Hakeem Olajuwon"
+        },
+        {
+          "name": "Brad Daugherty"
+        },
+        {
+          "name": "Patrick Ewing"
+        },
+        {
+          "name": "Dennis Rodman"
+        }
       ],
-      "roomid": "1"
+      "id": "1"
     },
     {
       "name": "Room C",
       "subscribed": [],
-      "roomid": "2"
+      "id": "2"
     }
   ]
 }

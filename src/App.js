@@ -14,6 +14,15 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this.stateChange();
+  }
+
+  handler = () => {
+    this.stateChange();
+  }
+
+
+  stateChange = () => {
     let usersUrl = "http://localhost:3001/users"
     axios.get(usersUrl)
       .then(resp => {
@@ -51,6 +60,7 @@ class App extends Component {
             <div className="room" key={roomsData.roomid}>
               <Room
                 name={roomsData.name}
+                handler={this.handler}
                 subscribed={roomsData.subscribed} />
             </div>
           ))}
