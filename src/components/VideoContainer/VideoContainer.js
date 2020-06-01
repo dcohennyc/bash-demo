@@ -3,7 +3,10 @@ import VideoFeed from '../VideoFeed/VideoFeed';
 
 class VideoContainer extends React.Component {
     render() {
-        return <VideoFeed />;     
+        return <VideoFeed 
+                name={this.props.name}
+                src={this.props.src}
+                />;     
     }
 }
 

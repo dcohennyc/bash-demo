@@ -2,7 +2,8 @@ import React from 'react';
 
 class VideoFeed extends React.Component {
     render() {
-        return <h1>Video Feed</h1>;
+        return <div><li>{this.props.name}</li>
+            <img src={this.props.src} /></div>;
     }
 }
 

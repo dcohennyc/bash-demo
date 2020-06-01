@@ -5,43 +5,52 @@ import VideoContainer from './components/VideoContainer/VideoContainer';
 import Sidebar from './components/Sidebar/Sidebar';
 import Room from './components/Room/Room';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      users: [],
+      rooms: []
     };
   }
 
   componentDidMount() {
-    let url = "http://localhost:3001/users"
-    fetch(url)
+    let usersUrl = "http://localhost:3001/users"
+    fetch(usersUrl)
       .then(resp => resp.json())
-      .then(data => {
-        let users = data.map((user,index) => {
-          return (
-            <div key={index}>
-              <h3>{user.name}: {user.rooms}</h3>
-            </div>
-          )
-        })
-        this.setState({users: users});
-      })
+      .then(data => this.setState({ users: data }));
+    let roomsUrl = "http://localhost:3001/rooms"
+    fetch(roomsUrl)
+      .then(resp => resp.json())
+      .then(data => this.setState({ rooms: data }));
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          {this.state.users}
-        </header>
-        <VideoContainer />
-        <Sidebar />
-        <Room />
-  
+        <div className="container">
+          <header className="App-header">
+            {this.state.users.map(videoData => (
+              <div key={videoData.userid} className="video-card">
+                <VideoContainer
+                  key={videoData.userid}
+                  name={videoData.name}
+                  src={videoData.feedSrc} />
+              </div>
+            ))}
+          </header>
+        </div>
+        <nav className="sidebar">
+          <h2>Rooms</h2>
+          {this.state.rooms.map(roomsData => (
+            <div className="room" key={roomsData.roomid}>
+              <Room
+                name={roomsData.name} />
+            </div>
+          ))}
+        </nav>
       </div>
-    );  
+    );
   }
 }
 
