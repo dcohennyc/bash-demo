@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import VideoContainer from './components/VideoContainer/VideoContainer';
-import Sidebar from './components/Sidebar/Sidebar';
 import Room from './components/Room/Room';
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -16,36 +15,43 @@ class App extends Component {
 
   componentDidMount() {
     let usersUrl = "http://localhost:3001/users"
-    fetch(usersUrl)
-      .then(resp => resp.json())
-      .then(data => this.setState({ users: data }));
+    axios.get(usersUrl)
+      .then(resp => {
+        const users = resp.data;
+        this.setState({ users });
+      });
     let roomsUrl = "http://localhost:3001/rooms"
-    fetch(roomsUrl)
-      .then(resp => resp.json())
-      .then(data => this.setState({ rooms: data }));
+    axios.get(roomsUrl)
+      .then(resp => {
+        const rooms = resp.data;
+        this.setState({ rooms });
+      });
   }
+  
 
   render() {
     return (
       <div className="App">
         <div className="container">
-          <header className="App-header">
-            {this.state.users.map(videoData => (
-              <div key={videoData.userid} className="video-card">
-                <VideoContainer
-                  key={videoData.userid}
-                  name={videoData.name}
-                  src={videoData.feedSrc} />
-              </div>
-            ))}
-          </header>
+          <header className="App-header"></header>
+            <div className="video-container">
+              {this.state.users.map(videoData => (
+                <div key={videoData.userid} className="video-card">
+                  <VideoContainer
+                    key={videoData.userid}
+                    name={videoData.name}
+                    src={videoData.feedSrc} />
+                </div>
+              ))}
+            </div>
         </div>
         <nav className="sidebar">
           <h2>Rooms</h2>
           {this.state.rooms.map(roomsData => (
             <div className="room" key={roomsData.roomid}>
               <Room
-                name={roomsData.name} />
+                name={roomsData.name}
+                subscribed={roomsData.subscribed} />
             </div>
           ))}
         </nav>

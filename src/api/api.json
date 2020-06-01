@@ -2,25 +2,21 @@
   "users": [
     {
       "name": "Lebron James",
-      "rooms": "room_1",
       "feedSrc": "images/lebron.jpg",
       "userid": "0"
     },
     {
       "name": "John Wall",
-      "rooms": "room_2",
       "feedSrc": "images/johnwall.jpeg",
       "userid": "1"
     },
     {
       "name": "Anthony Davis",
-      "rooms": "room_1, room_2",
       "feedSrc": "images/anthonydavis.jpg",
       "userid": "2"
     },
     {
       "name": "Giannis Antetokounmpo",
-      "rooms": "room_1, room_2",
       "feedSrc": "images/giannis.jpg",
       "userid": "3"
     }
@@ -28,17 +24,31 @@
   "rooms": [
     {
       "name": "Room A",
-      "users": [],
+      "subscribed": [
+        {"name": "Lebron James"},
+        {"name": "John Wall"},
+        {"name": "Anthony Davis"},
+        {"name": "Giannis Antetokounmpo"}
+      ],
       "roomid": "0"
     },
     {
       "name": "Room B",
-      "users": [],
+      "subscribed": [
+        {"name": "Larry Bird"},
+        {"name": "Isiah Thomas"},
+        {"name": "Magic Johnson"},
+        {"name": "Scott Burrell"},
+        {"name": "Hakeem Olajuwon"},
+        {"name": "Brad Daugherty"},
+        {"name": "Patrick Ewing"},
+        {"name": "Dennis Rodman"}
+      ],
       "roomid": "1"
     },
     {
       "name": "Room C",
-      "users": [],
+      "subscribed": [],
       "roomid": "2"
     }
   ]
