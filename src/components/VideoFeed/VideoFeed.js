@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTimesCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import './VideoFeed.css';
+
 
 
 class VideoFeed extends React.Component {
@@ -19,7 +23,8 @@ class VideoFeed extends React.Component {
     }
 
     render() {
-        return <div><li>{this.props.name} <span onClick={this.removeUser}>(x)</span></li>
+        return <div><li>{this.props.name} <span onClick={this.removeUser}><FontAwesomeIcon icon={faTimesCircle} /></span>
+        </li>
             <img src={this.props.src} /></div>;
     }
 }

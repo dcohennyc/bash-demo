@@ -16,8 +16,9 @@ nav {
   background-image: linear-gradient(157deg,#2487a0,#714fb2);
 }
 
-h2 {
+h1, h2 {
   color: black;
+  font-family: "Jost";
 }
 
 h3 {

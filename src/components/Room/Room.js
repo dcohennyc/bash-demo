@@ -1,6 +1,10 @@
 import React from 'react';
 import './Room.css';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTimesCircle, faUserPlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+
 
 class Room extends React.Component {
 
@@ -20,12 +24,12 @@ class Room extends React.Component {
 
     render() {
       const isActive = this.props.active;
-        return <div className="room"><h1>{this.props.name} {isActive ? <span></span> : <span>(join)</span>}</h1>
+        return <div className="room"><h2>{this.props.name} {isActive ? <span></span> : <span className="join"><FontAwesomeIcon icon={faPlusCircle} /> Join</span>}</h2>
         {this.props.subscribed.map(subscribed => (
               <h3 key={subscribed.id}>{subscribed.name}</h3>
           ))}
         {isActive ? 
-        <span className="add-user" onClick={ this.addUser }>(add user)</span>
+        <span className="add-user" onClick={ this.addUser }><FontAwesomeIcon icon={faUserPlus} /> Add User</span>
         : <span></span>}
         </div>
         ;
