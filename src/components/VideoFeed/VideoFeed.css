@@ -8,9 +8,14 @@
     flex-basis: 100%;
 }
 
+.video-card > div {
+    max-height: 100%;
+    overflow: hidden;
+}
+
 .video-card img {
-max-width: 100%;
-object-fit: cover;
+width: 100%;
+object-fit: contain;
 }
 
 .video-card li {
@@ -31,64 +36,77 @@ font-size: 12px;
 .video-card:nth-last-child(n+4):first-child,
 .video-card:nth-last-child(n+4):first-child ~ * {
   flex-basis: 50%; 
+  height: 50vh;
 }
 
 .video-card:nth-last-child(n+5):first-child,
 .video-card:nth-last-child(n+5):first-child ~ * {
   flex-basis: 33%;
+  height: 50vh;
 }
 
 .video-card:nth-last-child(n+6):first-child,
 .video-card:nth-last-child(n+6):first-child ~ * {
-  flex-basis: 33%; 
+  flex-basis: 33%;
+  height: 50vh;
 }
 
 .video-card:nth-last-child(n+7):first-child,
 .video-card:nth-last-child(n+7):first-child ~ * {
-  flex-basis: 33%; 
+  flex-basis: 33%;
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+8):first-child,
 .video-card:nth-last-child(n+8):first-child ~ * {
   flex-basis: 33%; 
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+9):first-child,
 .video-card:nth-last-child(n+9):first-child ~ * {
   flex-basis: 33%; 
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+10):first-child,
 .video-card:nth-last-child(n+10):first-child ~ * {
   flex-basis: 25%;
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+11):first-child,
 .video-card:nth-last-child(n+11):first-child ~ * {
   flex-basis: 25%;
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+12):first-child,
 .video-card:nth-last-child(n+12):first-child ~ * {
   flex-basis: 25%;
+  height: 33vh;
 }
 
 .video-card:nth-last-child(n+13):first-child,
 .video-card:nth-last-child(n+13):first-child ~ * {
   flex-basis: 25%;
+  height: 25vh;
 }
 
 .video-card:nth-last-child(n+14):first-child,
 .video-card:nth-last-child(n+14):first-child ~ * {
   flex-basis: 25%;
+  height: 25vh;
 }
 
 .video-card:nth-last-child(n+15):first-child,
 .video-card:nth-last-child(n+15):first-child ~ * {
   flex-basis: 25%;
+  height: 25vh;
 }
 
 .video-card:nth-last-child(n+16):first-child,
 .video-card:nth-last-child(n+16):first-child ~ * {
   flex-basis: 25%;
+  height: 25vh;
 }
