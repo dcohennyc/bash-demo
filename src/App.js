@@ -45,7 +45,8 @@ class App extends Component {
               {this.state.users.map(videoData => (
                 <div key={videoData.id} className="video-card">
                   <VideoContainer
-                    key={videoData.id}
+                    id={videoData.id}
+                    handler={this.handler}
                     name={videoData.name}
                     src={videoData.feedSrc} />
                 </div>

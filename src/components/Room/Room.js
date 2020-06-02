@@ -10,11 +10,10 @@ class Room extends React.Component {
             "name": 'Test User',
             "feedSrc": "images/raptors.jpg"
           })
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
+          .then(resp => {
+            console.log(resp.data)
+          }).catch(error => {
+            console.log(error)
           });
         this.props.handler();
     }

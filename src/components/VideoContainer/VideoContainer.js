@@ -4,6 +4,8 @@ import VideoFeed from '../VideoFeed/VideoFeed';
 class VideoContainer extends React.Component {
     render() {
         return <VideoFeed 
+                id={this.props.id}
+                handler={this.props.handler}
                 name={this.props.name}
                 src={this.props.src}
                 />;     
