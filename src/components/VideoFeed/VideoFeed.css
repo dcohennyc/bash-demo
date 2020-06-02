@@ -1,0 +1,94 @@
+.video-card {
+    float: left;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+}
+
+.video-card img {
+max-width: 100%;
+object-fit: cover;
+}
+
+.video-card li {
+list-style-type: none;
+font-size: 12px;
+}
+
+.video-card:nth-last-child(n+2):first-child,
+.video-card:nth-last-child(n+2):first-child ~ * {
+  flex-basis: 50%; 
+}
+
+.video-card:nth-last-child(n+3):first-child,
+.video-card:nth-last-child(n+3):first-child ~ * {
+  flex-basis: 33%; 
+}
+
+.video-card:nth-last-child(n+4):first-child,
+.video-card:nth-last-child(n+4):first-child ~ * {
+  flex-basis: 50%; 
+}
+
+.video-card:nth-last-child(n+5):first-child,
+.video-card:nth-last-child(n+5):first-child ~ * {
+  flex-basis: 33%;
+}
+
+.video-card:nth-last-child(n+6):first-child,
+.video-card:nth-last-child(n+6):first-child ~ * {
+  flex-basis: 33%; 
+}
+
+.video-card:nth-last-child(n+7):first-child,
+.video-card:nth-last-child(n+7):first-child ~ * {
+  flex-basis: 33%; 
+}
+
+.video-card:nth-last-child(n+8):first-child,
+.video-card:nth-last-child(n+8):first-child ~ * {
+  flex-basis: 33%; 
+}
+
+.video-card:nth-last-child(n+9):first-child,
+.video-card:nth-last-child(n+9):first-child ~ * {
+  flex-basis: 33%; 
+}
+
+.video-card:nth-last-child(n+10):first-child,
+.video-card:nth-last-child(n+10):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+11):first-child,
+.video-card:nth-last-child(n+11):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+12):first-child,
+.video-card:nth-last-child(n+12):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+13):first-child,
+.video-card:nth-last-child(n+13):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+14):first-child,
+.video-card:nth-last-child(n+14):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+15):first-child,
+.video-card:nth-last-child(n+15):first-child ~ * {
+  flex-basis: 25%;
+}
+
+.video-card:nth-last-child(n+16):first-child,
+.video-card:nth-last-child(n+16):first-child ~ * {
+  flex-basis: 25%;
+}

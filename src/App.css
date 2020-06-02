@@ -1,36 +1,7 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 8fr 1fr;
-}
-
-.video-container {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  font-size: calc(10px + 2vmin);
-  color: white;
-  grid-gap: 10px;
-}
-
-.video-card {
-  float: left;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  
-}
-
-.video-card li {
-  list-style-type: none;
-  font-size: 12px;
+  grid-template-columns: 7fr 2fr;
 }
 
 .container {
