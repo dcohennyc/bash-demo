@@ -55,13 +55,12 @@ class App extends Component {
         <nav className="sidebar">
           <h2>Rooms</h2>
           {this.state.rooms.map(roomsData => (
-            <div className="room" key={roomsData.id}>
               <Room
+                key={roomsData.id}
                 handler={this.handler}
                 name={roomsData.name}
                 active={roomsData.active}
                 subscribed={roomsData.subscribed} />
-            </div>
           ))}
         </nav>
       </div>

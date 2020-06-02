@@ -1,52 +1,22 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: grid;
+  grid-template-columns: 8fr 1fr;
 }
 
 .video-container {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.container {
-  float: left;
-  width: 80%;
-}
-
-nav {
-  float: right;
-  height: 100%;
-  width: 20%;
-}
-
-h2 {
-  color: red;
+  grid-gap: 10px;
 }
 
 .video-card {
-  height: auto;
-  width: 50%;
   float: left;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
 }
@@ -54,7 +24,8 @@ h2 {
 .video-card img {
   max-width: 100%;
   max-height: 100%;
-  clip-path: circle(100px at center);
+  object-fit: contain;
+  
 }
 
 .video-card li {
@@ -62,11 +33,22 @@ h2 {
   font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  float: left;
+}
+
+nav {
+  float: right;
+  min-height: 100vh;  
+  width: 2fr;
+  background-color: #2487a0;
+  background-image: linear-gradient(157deg,#2487a0,#714fb2);
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: white;
 }
