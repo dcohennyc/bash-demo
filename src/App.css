@@ -46,6 +46,6 @@ h3 {
   margin-top: 5px;
 }
 
-.add-user:hover, .add-user:active {
+.add-user:hover, .add-user:active, .join:hover, .join:active {
   text-decoration: underline;
 }

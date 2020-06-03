@@ -19,7 +19,7 @@ class VideoFeed extends React.Component {
     }
 
     render() {
-        return <div><li>{this.props.name} <span onClick={this.removeUser}><FontAwesomeIcon icon={faTimesCircle} /></span>
+        return <div><li>{this.props.name} <span onClick={this.removeUser}><FontAwesomeIcon icon={faTimesCircle} size="xs" /></span>
         </li>
             <img src={this.props.src} alt={this.props.name} /></div>;
     }
