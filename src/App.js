@@ -3,6 +3,9 @@ import './App.css';
 import VideoContainer from './components/VideoContainer/VideoContainer';
 import Room from './components/Room/Room';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+
 
 class App extends Component {
   constructor(props) {
@@ -20,6 +23,20 @@ class App extends Component {
   handler = () => {
     this.stateChange();
   }
+  
+  addUser = () => {
+    let usersUrl = "http://localhost:3001/users"
+    axios.post(usersUrl, {
+        "name": 'Test User',
+        "feedSrc": "images/raptors.jpg"
+      })
+      .then(resp => {
+        console.log(resp.data)
+      }).catch(error => {
+        console.log(error)
+      });
+    this.stateChange();
+}
 
   /* API calls to local json-server instance - data can be seen at /api/api.json */
 
@@ -55,7 +72,13 @@ class App extends Component {
             </div>
         </div>
         <nav className="sidebar">
-
+          <div className="room">
+          <h2>Active Room</h2>
+          {this.state.users.map(videoData => (
+                  <h3 key={videoData.id}>{videoData.name}</h3>
+              ))}
+          <span className="add-user" onClick={ this.addUser }><FontAwesomeIcon icon={faUserPlus} /> Add User</span>
+          </div>
           {this.state.rooms.map(roomsData => (
               <Room
                 key={roomsData.id}

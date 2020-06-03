@@ -24,3 +24,28 @@ h1, h2 {
 h3 {
   color: white;
 }
+
+.room {
+  text-align: left;
+  padding: 20px;
+}
+
+.room h1 span {
+  font-size: 12px;
+}
+
+.add-user, .join {
+  cursor: pointer;
+  color: white;
+  font-family: "Roboto Slab";
+  font-size: 16px;
+}
+
+.join {
+  float: right;
+  margin-top: 5px;
+}
+
+.add-user:hover, .add-user:active {
+  text-decoration: underline;
+}
