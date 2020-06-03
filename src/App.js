@@ -59,6 +59,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div className="video-container">
+            
             {this.state.users.map((videoData) => (
               <div key={videoData.id} className="video-card">
                 <VideoContainer
@@ -77,9 +78,11 @@ class App extends Component {
             {this.state.users.map((videoData) => (
               <h3 key={videoData.id}>{videoData.name}</h3>
             ))}
+            {this.state.users.length < 16 ? 
             <span className="add-user" onClick={this.addUser}>
               <FontAwesomeIcon icon={faUserPlus} /> Add User
-            </span>
+            </span> : <span></span>}
+            
           </div>
           {this.state.rooms.map((roomsData) => (
             <Room
