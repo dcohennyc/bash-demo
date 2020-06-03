@@ -2,8 +2,7 @@ import React from 'react';
 import './Room.css';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTimesCircle, faUserPlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
 
 class Room extends React.Component {

@@ -21,6 +21,7 @@ class App extends Component {
     this.stateChange();
   }
 
+  /* API calls to local json-server instance - data can be seen at /api/api.json */
 
   stateChange = () => {
     let usersUrl = "http://localhost:3001/users"

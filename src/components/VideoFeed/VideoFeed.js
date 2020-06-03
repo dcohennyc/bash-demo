@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faTimesCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import './VideoFeed.css';
 
 
@@ -14,18 +13,15 @@ class VideoFeed extends React.Component {
         let usersUrl = "http://localhost:3001/users/" + userid;
         axios.delete(usersUrl)
         .then(resp => {
-            console.log(resp.data)
         }).catch(error => {
-            console.log(error)
         });
         this.props.handler();
-        console.log(usersUrl);
     }
 
     render() {
         return <div><li>{this.props.name} <span onClick={this.removeUser}><FontAwesomeIcon icon={faTimesCircle} /></span>
         </li>
-            <img src={this.props.src} /></div>;
+            <img src={this.props.src} alt={this.props.name} /></div>;
     }
 }
 

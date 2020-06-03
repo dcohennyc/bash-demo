@@ -26,16 +26,20 @@
       "name": "Room A",
       "subscribed": [
         {
-          "name": "Lebron James"
+          "name": "Lebron James",
+          "id": "0"
         },
         {
-          "name": "John Wall"
+          "name": "John Wall",
+          "id": "1"
         },
         {
-          "name": "Anthony Davis"
+          "name": "Anthony Davis",
+          "id": "2"
         },
         {
-          "name": "Giannis Antetokounmpo"
+          "name": "Giannis Antetokounmpo",
+          "id": "3"
         }
       ],
       "id": "0",
@@ -45,28 +49,36 @@
       "name": "Room B",
       "subscribed": [
         {
-          "name": "Larry Bird"
+          "name": "Larry Bird",
+          "id": "0"
         },
         {
-          "name": "Isiah Thomas"
+          "name": "Isiah Thomas",
+          "id": "1"
         },
         {
-          "name": "Magic Johnson"
+          "name": "Magic Johnson",
+          "id": "2"
         },
         {
-          "name": "Scott Burrell"
+          "name": "Scott Burrell",
+          "id": "3"
         },
         {
-          "name": "Hakeem Olajuwon"
+          "name": "Hakeem Olajuwon",
+          "id": "4"
         },
         {
-          "name": "Brad Daugherty"
+          "name": "Brad Daugherty",
+          "id": "5"
         },
         {
-          "name": "Patrick Ewing"
+          "name": "Patrick Ewing",
+          "id": "6"
         },
         {
-          "name": "Dennis Rodman"
+          "name": "Dennis Rodman",
+          "id": "7"
         }
       ],
       "id": "1",
